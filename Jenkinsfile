@@ -29,5 +29,12 @@ pipeline {
                 }
             }
         }
+        stage('run image') {
+            steps{
+                scripts{             
+                sh 'docker run  -d -t --name kubernetes -p 8081:80 venkat5658/kubernetes'  
+                }
+            }
+       }
     }    
 }

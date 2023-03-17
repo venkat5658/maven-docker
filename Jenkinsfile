@@ -16,7 +16,7 @@ pipeline {
             steps{
                 script{
                     sh 'docker build -t venkat5658/kubernetes .'
-                    sh 'sudo chmod 777 /var/run/docker.sock'
+                    
                 }
             }
         }

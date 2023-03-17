@@ -11,11 +11,7 @@ pipeline {
                   sh 'mvn clean install'
             }
         }
-         stage('stop container') {
-            steps{
-                sh 'docker rm $(sudo docker stop $(sudo docker ps -a | grep "venkat5658/kubernetes" | cut -d " " -f 1))'
-             }
-        }        
+        
         stage('Build docker image'){
             steps{
                 script{
